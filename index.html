@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Margem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Margem para Empréstimo Consignado</h1>
+        <div></div>
+        <div></div>
+        <form id="calculator-form">
+            <label for="salary">Valor do benefício / salário (recebidos atualmente):</label>
+            <input type="text" id="salary" required oninput="formatNumber(this)">
+
+            <label> de empréstimo do benefício (margem em uso):</label>
+            <input type="text" id="loan" required oninput="formatNumber(this)">
+
+            <button type="button" onclick="calculateMargin()">Descubra se você tem margem disponível</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
